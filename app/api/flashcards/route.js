@@ -1,4 +1,4 @@
-import { cardsData } from "../data/flashcards";
+import { cardsData } from "../flashcards/cardsData";
 
 //get:
 
@@ -6,12 +6,14 @@ export async function GET(req) {
   const {searchParams} = new URL(req.url);
   const id = searchParams.get('id')
   const card = cardsData.find((anyCard) => anyCard.id === Number(id))
-
-  if (card)
-  {
-    return new Response(JSON.stringify(card), { status: 200 });
+  if (id){
+    if (card)
+    {
+      return new Response(JSON.stringify(card), { status: 200 });
+    }
+    return new Response(JSON.stringify({ message: "Flashcard not found" }), { status: 404 });
   }
-  return new Response(JSON.stringify({ message: "Flashcard not found" }), { status: 404 });
+  return new Response(JSON.stringify(cardsData), { status: 200 });
 }
 
 
