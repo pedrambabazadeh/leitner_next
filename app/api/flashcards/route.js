@@ -1,4 +1,4 @@
-import { cardsData } from "../flashcards/cardsData";
+import { cardsData } from "./cardsData";
 
 //get:
 
