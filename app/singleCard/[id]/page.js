@@ -1,6 +1,8 @@
 "use client";
+import { notFound } from 'next/navigation';
 import React from 'react'
 import { useEffect, useState } from 'react';
+import NotFound from './not-found';
 
 
 function SingleCard({params}) {
@@ -14,7 +16,8 @@ function SingleCard({params}) {
       try {
         const res = await fetch(`/api/flashcards?id=${id}`);
         if (!res.ok) {
-          throw new Error("Card not found");
+          //notFound();
+          throw new Error("card not found");
         }
         const data = await res.json();
         setCard(data);
@@ -26,7 +29,7 @@ function SingleCard({params}) {
   }, [id]);
 
   if (error) {
-    return <p>{error}</p>;
+    return <NotFound/>;
   }
 
   if (!card) {
