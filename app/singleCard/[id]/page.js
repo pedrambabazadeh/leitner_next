@@ -33,13 +33,15 @@ function SingleCard({params}) {
   }
 
   if (!card) {
-    return <p>Loading...</p>;
+    return <p className="text-center text-gray-500">Loading...</p>;
   }
 
   return (
-    <div>
-      <h1>{card.word}</h1>
-      <p>{card.translation}</p>
+    <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-10">
+      <div className="p-4">
+        <h1 className="text-2xl font-bold text-gray-800">{card.word}</h1>
+        <p className="mt-2 text-gray-600">{card.translation}</p>
+      </div>
     </div>
   );
 }
