@@ -16,6 +16,8 @@ export async function GET(req) {
   return new Response(JSON.stringify(cardsData), { status: 200 });
 }
 
+//inversely define it ( if(!id) {...})
+
 
 //post:
 
