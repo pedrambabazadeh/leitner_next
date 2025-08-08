@@ -1,0 +1,19 @@
+<svg width="360" height="80" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="grad-n2n" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#FF00F7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- N2N with gradient -->
+  <text x="10" y="55" font-family="Rajdhani, sans-serif" font-weight="700" font-size="48" fill="url(#grad-n2n)">
+    N2N
+  </text>
+
+  <!-- 'languages' matching size, tight spacing -->
+  <text x="110" y="55" font-family="Rajdhani, sans-serif" font-weight="700" font-size="48" fill="#E0E0E0">
+    languages
+  </text>
+</svg>
