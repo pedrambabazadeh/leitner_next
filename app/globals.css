@@ -31,3 +31,22 @@
 body {
   background-color: var(--color-background);
 }
+
+/* Components*/
+
+.btn-primary{
+  color: var(--color-background);
+  background-color: var(--color-primary);
+}
+
+.btn-accent
+{
+  color: var(--color-background);
+  background-color: var(--color-accent);
+}
+
+.card
+{
+  background: var(--color-surface);
+  box-shadow:0 0 20px rgba(0,240,255,0.3)
+}
