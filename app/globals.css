@@ -16,6 +16,11 @@
     --light-text: #ffffff;
 }
 
+.text-light
+{
+  color: #ffffff;
+}
+
 .gradient-text {
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   -webkit-background-clip: text;

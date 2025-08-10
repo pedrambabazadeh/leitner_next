@@ -27,20 +27,20 @@ export default function Header({ children }) {
         'https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js'
       );
       await loadScript(
-        'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js'
+        'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js'
       );
 
 
       // Wait until VANTA.NET exists
       await new Promise((resolve) => {
         const check = () => {
-          if (window.VANTA?.GLOBE) resolve();
+          if (window.VANTA?.NET) resolve();
           else setTimeout(check, 50);
         };
         check();
       });
 
-      const effect = window.VANTA.GLOBE({
+      const effect = window.VANTA.NET({
         el: vantaRef.current,
         mouseControls: true,
         touchControls: true,
@@ -51,7 +51,6 @@ export default function Header({ children }) {
         scale: 0.0,
         scaleMobile: 1.0,
         color:0x00f0ff ,
-        color2: 0xFF00F7,
         backgroundColor: '#0a0a0a',
         points: 20.0,
         maxDistance: 20.0,

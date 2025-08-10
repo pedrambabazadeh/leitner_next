@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradImport" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#FF00F7"/>
+    </linearGradient>
+  </defs>
+  <!-- Document outline -->
+  <rect x="18" y="12" width="28" height="36" rx="2" ry="2"
+        fill="none" stroke="url(#gradImport)" stroke-width="3"/>
+  <!-- Down arrow -->
+  <path d="M32 20 V40" stroke="url(#gradImport)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M26 34 L32 40 L38 34"
+        fill="none" stroke="url(#gradImport)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

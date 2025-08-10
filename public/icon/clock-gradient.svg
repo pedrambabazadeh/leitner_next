@@ -1,0 +1,27 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="clockTitle">
+  <title id="clockTitle">Clock</title>
+  <defs>
+    <linearGradient id="gradClock" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#FF00F7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer circle -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="url(#gradClock)" stroke-width="3"/>
+
+  <!-- Minimal 4 ticks (12,3,6,9) -->
+  <line x1="32" y1="8.5" x2="32" y2="12" stroke="url(#gradClock)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="51.5" y1="32" x2="48" y2="32" stroke="url(#gradClock)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="32" y1="55.5" x2="32" y2="52" stroke="url(#gradClock)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="12.5" y1="32" x2="16" y2="32" stroke="url(#gradClock)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Minute hand (pointing near 2 -> 10 minutes) -->
+  <line x1="32" y1="32" x2="44" y2="22" stroke="url(#gradClock)" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Hour hand (pointing near 10 -> 10 o'clock) -->
+  <line x1="32" y1="32" x2="22" y2="24" stroke="url(#gradClock)" stroke-width="3.6" stroke-linecap="round"/>
+
+  <!-- Center hub -->
+  <circle cx="32" cy="32" r="2.6" fill="url(#gradClock)"/>
+</svg>
