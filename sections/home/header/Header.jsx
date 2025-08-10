@@ -81,18 +81,20 @@ export default function Header({ children }) {
         fontSize: '2rem',
         backgroundColor: isReady ? 'transparent' : '#0a0a0a', // fallback bg color
       }}
-      className='flex flex-col'
+      className=' relative flex flex-col'
     >
-      <h2
-        className="text-5xl font-bold gradient-text mb-4"
+      <div className="absolute flex flex-col items-center justify-center w-full h-full" style={{backdropFilter: 'blur(0px)'}}>
+              <h2
+        className="text-5xl font-bold text-[var(--color-primary)] mb-4"
         style={{ fontFamily: 'Orbitron, sans-serif' }}
-      >
-        Learn Any Language from any other language, make your own portable dictionary with customizable flashcards.
-      </h2>
-      <p className="text-xl mb-8 text-[var(--color-light)]">Use the Leitner system and AI-powered tools to retain words faster.</p>
-      <div className="space-x-4">
-        <button className=" text-sm btn-primary px-6 py-3 rounded-xl hover:scale-105 transition">Get Started</button>
-        <button className=" text-sm btn-accent px-6 py-3 rounded-xl hover:scale-105 transition"> Try Demo</button>
+              >
+                Learn Any Language from any other language, make your own portable dictionary with customizable flashcards.
+              </h2>
+              <p className="text-xl mb-8 text-[var(--color-light)]">Use the Leitner system and AI-powered tools to retain words faster.</p>
+              <div className="space-x-4">
+                <button className=" text-sm btn-primary px-6 py-3 rounded-xl hover:scale-105 transition">Get Started</button>
+                <button className=" text-sm btn-accent px-6 py-3 rounded-xl hover:scale-105 transition"> Try Demo</button>
+              </div>
       </div>
       {children}
     </header>
