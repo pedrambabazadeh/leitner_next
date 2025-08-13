@@ -1,9 +1,8 @@
 const revewCrds =
-{
-    verbs:
     [
         {
             id: 1,
+            category: "verb",
             title: "vergessen",
             translation: "to forget",
             usage: [
@@ -16,10 +15,9 @@ const revewCrds =
                 "Er hat vergessen, die Tür abzuschließen."
             ],
             usageRate: .8,
-            photo: '/img/vergessen.jpg',
+            photos: ['/img/vergessen.jpg'],
             nominal: "das Vergessen"
 
         }
     ]
-}
 export { reviewCards }

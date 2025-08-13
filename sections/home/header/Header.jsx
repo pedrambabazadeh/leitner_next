@@ -88,7 +88,7 @@ export default function Header({ children }) {
         className="text-5xl font-bold text-[var(--color-primary)] mb-4"
         style={{ fontFamily: 'Orbitron, sans-serif' }}
               >
-                Learn Any Language from any other language, make your own portable dictionary with customizable flashcards.
+                Learn Any Language from any other language, make your own portable <span className='text-[var(--color-secondary)]'>dictionary</span> with customizable flashcards.
               </h2>
               <p className="text-xl mb-8 text-[var(--color-light)]">Use the Leitner system and AI-powered tools to retain words faster.</p>
               <div className="space-x-4">

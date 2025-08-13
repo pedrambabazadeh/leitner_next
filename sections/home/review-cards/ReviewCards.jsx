@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { ReviewCard } from '@/components/exports/review-cards'
+import {Section} from '@/utils'
 const ReviewCards = () => {
   return (
-    <section className='py-20 px-8 max-w-screen-xl mx-auto text-center'>ReviewCards</section>
+    <Section className='max-w-screen-xl mx-auto text-center'>
+      <ReviewCard />
+    </Section>
   )
 }
 

@@ -52,6 +52,24 @@ body {
   background-color: var(--color-accent);
 }
 
+.btn-back-gradient {
+  color: var(--color-background);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+}
+
+.btn-text-gradient
+{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+.btn-text-gradient>span{
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-clip: text;
+}
+
 .card
 {
   background: var(--color-surface);
