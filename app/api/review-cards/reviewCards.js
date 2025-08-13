@@ -1,4 +1,4 @@
-const revewCrds =
+const reviewCards =
     [
         {
             id: 1,
