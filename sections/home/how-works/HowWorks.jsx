@@ -5,8 +5,7 @@ import {ClockIcon,  ImportIcon, InfiniteIcon} from '@/ui/icons/gradient'
 
 const HowWorks = () => {
   return (
-    <Section>
-        <h3 className='text-3xl mb-12 text-[var(--color-light)]' style={{fontFamily:" 'Rajdhani, sans-serif'"}}>How It Works</h3>
+    <Section title="How It Works">
         <CardGroup>
             <Card>
                 <ImportIcon className="w-16 h-16 mx-auto mb-4" />

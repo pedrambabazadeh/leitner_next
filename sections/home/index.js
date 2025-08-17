@@ -3,3 +3,4 @@ export { default as HowWorks } from './how-works/HowWorks';
 export { default as Features } from './features/Features';
 export { default as ReviewCards } from './review-cards/ReviewCards';
 export { default as AskAI } from './ask-AI/AskAI';
+export { default as LearningCurve } from './learning-curve/LearningCurve';

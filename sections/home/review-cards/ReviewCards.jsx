@@ -9,7 +9,7 @@ const ReviewCards = async () => {
   const data = await response.json();
   console.log(data)
   return (
-    <Section className='max-w-screen-xl mx-auto text-center'>
+    <Section className='max-w-screen-xl mx-auto text-center' title='Try a flashCard'>
       <ReviewCard data={data} />
     </Section>
   )

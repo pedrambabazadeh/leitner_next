@@ -5,8 +5,7 @@ import React from 'react'
 
 const Features = () => {
   return (
-    <Section className='bg-[var(--color-background-second)]'>
-         <h3 className='text-3xl mb-12 text-[var(--color-light)]' style={{fontFamily:" 'Rajdhani, sans-serif'"}}>How It Works</h3>
+    <Section className='bg-[var(--color-background-second)]' title='Features'>
         <CardGroup cols={4}>
             <Card>
                 <SemiCircleIcon className="w-16 h-16 mx-auto mb-4 text-[var(--color-primary)]" />
