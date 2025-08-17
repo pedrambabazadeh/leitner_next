@@ -1,6 +1,6 @@
 import Image from "next/image";
 import FlashcardList from "./components/FlashCardList";
-import { Header, HowWorks, Features, ReviewCards } from "@/sections/home";
+import { Header, HowWorks, Features, ReviewCards, AskAI } from "@/sections/home";
 export default function Home() {
   return (
 <div className="text-center">
@@ -9,6 +9,7 @@ export default function Home() {
       <HowWorks/>
       <Features/>
       <ReviewCards/>
+      <AskAI/>
     </div>
   );
 }
