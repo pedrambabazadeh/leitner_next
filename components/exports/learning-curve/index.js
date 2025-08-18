@@ -1,0 +1,1 @@
+export { default as LinearChart } from "@/components/charts/LinearChart";
