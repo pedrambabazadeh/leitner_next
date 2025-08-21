@@ -7,16 +7,16 @@ const SingleReviewCard = ({data}) => {
         <h4 className="text-4xl mb-2 text-[var(--color-primary)]">{data[0].title}</h4>
         <p className="text-base text-[#ddd]">{data[0].translation}</p>
       </div>
-      <div className="w-full">
+      <div className="w-full container">
         <div className="flex items-center justify-center w-full gap-3 mb-3">
-          <button className=" hover:scale-105 transition  px-3 py-2 text-sm rounded-lg btn-primary w-5/12"> remember</button>
-          <button className=" hover:scale-105 transition  px-3 py-2 text-sm rounded-lg btn-accent w-5/12"> forget</button>
+          <button className=" hover:scale-105 transition w-[50%]  px-3 py-2 text-sm rounded-lg btn-primary w-5/12"> remember</button>
+          <button className=" hover:scale-105 transition w-[50%]  px-3 py-2 text-sm rounded-lg btn-accent w-5/12"> forget</button>
         </div>
         <div className="flex items-center justify-center w-full mb-3" area-enabled="false">
-          <button className=" hover:scale-105 transition  px-3 py-2 text-sm rounded-lg w-10/12 font-semibold btn-back-gradient"> read more</button>
+          <button className=" hover:scale-105 transition w-[100%] px-3 py-2 text-sm rounded-lg w-10/12 font-semibold btn-back-gradient"> read more</button>
         </div>
-        <div className="flex items-center justify-center w-full ">
-          <button className="hover:scale-105 transition px-3 py-2 text-sm rounded-lg w-10/12 font-semibold btn-text-gradient"> <span> open page</span></button>
+        <div className="flex items-center justify-end w-full">
+          <a href="#" className=" px-3 py-2 text-sm font-semibold gradient-text"> <span> open page</span></a>
         </div>
       </div>
     </div>
