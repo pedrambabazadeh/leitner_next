@@ -1,11 +1,11 @@
 import React from 'react'
 
-const SingleReviewCard = ({data}) => {
+const SingleReviewCard = ({title, data}) => {
   return (
     <div className='card p-6 rounded-2xl flex flex-col justify-between w-4/12 mx-auto'>
       <div className='mb-2'>
-        <h4 className="text-4xl mb-2 text-[var(--color-primary)]">{data[0].title}</h4>
-        <p className="text-base text-[#ddd]">{data[0].translation}</p>
+        <h4 className="text-4xl mb-2 text-[var(--color-primary)]">{title? title.title: data[0].title}</h4>
+        <p className="text-base text-[#ddd]">{title? title.translation:data[0].translation}</p>
       </div>
       <div className="w-full container">
         <div className="flex items-center justify-center w-full gap-3 mb-3">
