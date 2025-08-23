@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Rajdhani } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/sections/navigation/Navigation";
 import TopBar from "@/sections/top-bar/TopBar";
@@ -13,6 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const rajdhani = Rajdhani({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-rajdhani',
+});
+
 export const metadata = {
   title: "Leitner Box",
   description: "Application to learn vocabulary in any language faster",
@@ -21,8 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body style={{fontFamily: 'Rajdhani, sans-serif'}}
       >
       <div className="flex w-full">
         <div className=" w-8/120 h-full z-10">

@@ -4,8 +4,8 @@ const AIChatBox = () => {
   return (
     <div className="card max-w-screen mx-auto p-6 rounded-2xl flex flex-col items-center gap-6 ">
         <textarea id="ai prompt" placeholder='Ask AI, e.g. is this sentence correct?'
-         className="w-full p-4 rounded-xl text-base bg-[rgba(255,255,255,0.05)] text-[#ddd] min-h-[100px]"
-         style={{ fontFamily: 'rajdhani , sans-serif', border: '1px solid rgba(255,255,255,0.1)' }}
+         className="w-full focus-secondary p-4 rounded-xl text-base bg-[rgba(255,255,255,0.05)] text-[#ddd] min-h-[100px]"
+         style={{ fontFamily: 'rajdhani , sans-serif' }}
         />
         <button className='px-6 py-3 rounded-xl font-semibold btn-back-gradient'>
           ASK AI
