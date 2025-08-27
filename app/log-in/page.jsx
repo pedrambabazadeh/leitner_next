@@ -22,12 +22,12 @@ const LogIn = () => {
               <input type="checkbox" id="remember" name="remember" className="accent-[var(--color-primary)]" />
               <span className="text-[#C9D4DA] text-sm">Remember me</span>
             </label>
-            <a href="#" className="text-[var(--color-accent)] text-sm no-underline">Forgot password?</a>
+            <a href="#" className="text-[var(--color-secondary)] text-sm no-underline">Forgot password?</a>
           </div>
           <div className="flex gap-3">
-            <button type="submit" className="btn-primary px-3 py-2 text-sm rounded-lg hover:scale-105 transition">
+            <button type="submit" className="btn-primary-empty px-3 py-2 text-sm rounded-lg hover:scale-105 transition">
               <span>Log In</span></button>
-            <button type="button" className="btn-accent px-3 py-2 text-sm rounded-lg hover:scale-105 transition">Sign Up</button>
+            <button type="button" className="btn-accent-empty px-3 py-2 text-sm rounded-lg hover:scale-105 transition">Sign Up</button>
           </div>
           <div id="status" role="status" className='min-h-[24px]'></div>
           <div className="flex items-center  gap-3 mt-5">
@@ -36,8 +36,8 @@ const LogIn = () => {
             <div className="flex-1 h-[1px] bg-[rgba(255,255,255,0.3)]"></div>
           </div>
           <div className="mt-4">
-            <button className="btn-back-gradient w-full text-center px-3 py-2 text-sm rounded-lg hover:scale-105 transition font-semibold">Continue with Google</button>
-            <p className="text-[#C9D4DA] text-sm mt-4">Don't you have an account? <a href="#" className="gradient-text font-semibold">Sign Up</a></p>
+            <button className="btn-back-gradient-empty w-full text-center px-3 py-2 text-sm rounded-lg hover:scale-105 transition font-semibold"> <span> Continue with Google</span></button>
+            <p className="text-[#C9D4DA] text-sm mt-4">Don't you have an account? <a href="#" className="text-[var(--color-accent)] font-semibold">Sign Up</a></p>
           </div>
         </form>
     </div>
