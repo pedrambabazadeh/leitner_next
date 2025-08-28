@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Rajdhani } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/sections/navigation/Navigation";
 import TopBar from "@/sections/top-bar/TopBar";
+import Footer from "@/sections/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,7 +41,8 @@ export default function RootLayout({ children }) {
           {children}
         </main>
       </div>
-      </body>
-    </html>
+      <Footer />
+    </body>
+  </html>
   );
 }
