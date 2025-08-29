@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
             <Navigation />
           </div>
         </div>
-        <main className="w-11/12">
+        <main className="w-11/12 pb-16">
           <TopBar />
           {children}
         </main>
