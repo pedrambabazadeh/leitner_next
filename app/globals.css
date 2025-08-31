@@ -49,6 +49,9 @@ nav [data-active = "log-in"] [name="log-in"] {
   color: var(--color-secondary);
 }
 
+nav [data-active = "words"] [name="words"] {
+  color: var(--color-secondary);
+}
 /* Components*/
 
 .btn-primary{

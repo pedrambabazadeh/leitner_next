@@ -36,8 +36,8 @@ export default function RootLayout({ children }) {
             <Navigation />
           </div>
         </div>
-        <main className="w-11/12 pb-16">
-          <TopBar />
+        <TopBar />
+        <main className="relative w-11/12 pb-16 text-[var(--light-text)]">
           {children}
         </main>
       </div>
