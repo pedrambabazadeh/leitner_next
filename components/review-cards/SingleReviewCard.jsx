@@ -5,7 +5,7 @@ const SingleReviewCard = ({db, title, data}) => {
     <div className='card p-6 rounded-2xl flex flex-col justify-between w-4/12 mx-auto'>
       <div className='mb-2'>
         <h4 className="text-4xl mb-2 text-[var(--color-primary)]">{db? db.title :title? title.title: data[0].title}</h4>
-        <p className="text-base text-[#ddd]">{db? db.translations[0].text : title? title.translation : data[0].translation}</p>
+        <p className="text-base text-[#ddd]">{db? db.translations[0].text: title? title.translation : data[0].translation}</p>
       </div>
       <div className="w-full container">
         <div className="flex items-center justify-center w-full gap-3 mb-3">
