@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Link from 'next/link';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 
@@ -54,7 +55,7 @@ const LogIn = () => {
           </div>
           <div className="mt-4">
             <button className="btn-back-gradient-empty w-full text-center px-3 py-2 text-sm rounded-lg hover:scale-105 transition font-semibold"> <span> Continue with Google</span></button>
-            <p className="text-[#C9D4DA] text-sm mt-4">Don't you have an account? <a href="#" className="text-[var(--color-accent)] font-semibold">Sign Up</a></p>
+            <p className="text-[#C9D4DA] text-sm mt-4">Don't you have an account? <Link href="/sign-up" className="text-[var(--color-accent)] font-semibold">Sign Up</Link></p>
           </div>
         </Form>
       </Formik>
