@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Link from 'next/link';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
@@ -104,7 +105,7 @@ const SignUp = () => {
               <span>Continue with Google</span>
             </button>
             <p className="text-[#C9D4DA] text-sm mt-4">
-              Already have an account? <a href="#" className="text-[var(--color-accent)] font-semibold">Log In</a>
+              Already have an account? <Link href="/log-in" className="text-[var(--color-accent)] font-semibold">Log In</Link>
             </p>
           </div>
         </Form>
