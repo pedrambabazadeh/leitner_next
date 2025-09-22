@@ -1,11 +1,14 @@
 "use client"
 
-import React from 'react'
+import React, {useState} from 'react'
 import Link from 'next/link';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { signUpCall } from '@/app/services/auth';
 
 const SignUp = () => {
+
+  const [status, setStatus] = useState(null);
 
   const initialValues = {
     name: '',
@@ -31,10 +34,26 @@ const SignUp = () => {
     phone: Yup.string().matches(/^\+?\d*$/, 'Invalid phone number').notRequired(),
   });
 
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    setStatus(null);
+    try {
+        setStatus('Submitting...');
+        await signUpCall(values);
+        setStatus('Registration successful! Please check your email to verify your account.');
+        resetForm();
+    }
+    catch(err){
+      setStatus('Registration failed. Please try again. reason: ' + (err?.message || 'server error'));
+    }
+    finally {
+      setSubmitting(false);
+    }
+  }
+
   return (
     <div className="sign-up-container p-8 mx-auto rounded-xl bg-[var(--color-surface)] text-white w-full max-w-[480px]">
       <h2 style={{ fontWeight: 700 }} className="mb-3 text-2xl text-[var(--color-primary)]">Sign Up for N2N</h2>
-      <Formik initialValues={initialValues} validationSchema={validationSchema}>
+      <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
         <Form id="signup-form">
           <div className="mb-4">
             <label className='mb-2 text-[#C9D4DA]' htmlFor="name">First Name</label>
@@ -110,6 +129,7 @@ const SignUp = () => {
           </div>
         </Form>
       </Formik>
+      {status ? <span className="text-white">{status}</span> : <span>test</span>}
     </div>
   )
 }
