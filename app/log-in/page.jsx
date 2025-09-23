@@ -1,20 +1,37 @@
 "use client"
 
-import React from 'react'
+import React, {useState} from 'react'
 import Link from 'next/link';
+import {logInCall} from '@/services/auth';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 
 const LogIn = () => {
 
+  const [status, setStatus] = useState(null);
+
+  const handleSubmit = async (values, {setSubmitting, resetForm}) => {
+    setStatus(null);
+    try {
+      setStatus('Submitting...');
+       await logInCall(values);
+        setStatus('Login successful!');
+        resetForm();
+        // here I should redirect the user to the new page
+    } catch (error) {
+      setStatus(error?.message || 'An error occurred');
+    } finally {
+      setSubmitting(false);
+      console.log(status ? status : 'no status' );
+    }
+  };
+
   const initialValues = {
-    name: '',
     email: '',
     password: '',
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required('Name is required'),
     email: Yup.string().email('Invalid email').required('Email is required'),
     password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
   });
@@ -22,7 +39,7 @@ const LogIn = () => {
   return (
     <div className="log-in-container p-8 mx-auto rounded-xl bg-[var(--color-surface)] text-white w-full max-w-[480px]">
         <h2 style={{fontWeight:700}} className="mb-3 text-2xl text-[var(--color-primary)]">Log In to N2N</h2>
-      <Formik initialValues={initialValues} validationSchema={validationSchema}>
+      <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
         <Form  id="login-form">
             <div className="mb-4">
               <label className='mb-2 text-[#C9D4DA]' htmlFor="email">Email</label>
@@ -59,6 +76,7 @@ const LogIn = () => {
           </div>
         </Form>
       </Formik>
+      {status ? <span className="text-white">{status}</span> : <span>test</span>}
     </div>
   )
 }

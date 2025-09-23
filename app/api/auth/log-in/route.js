@@ -1,15 +1,14 @@
-import {backendURL} from '@/config/backend';
-
+import {backendURL} from '@/config/backend.js';
 
 export async function POST(request) {
     try{
         const body = await request.json();
-        const destructuredBody = (({ name, email, password, phone, lastName }) => ({ name, email, password, phone, last_name : lastName }))(body);
+        const destructuredBody = (({ email, password }) => ({ email, password }))(body);
         const hasScript = Object.values(destructuredBody).some(value => typeof value === 'string' && /<script.*?>.*?<\/script>/i.test(value));
         if (hasScript) {
             return new Response(JSON.stringify({ message: 'Invalid input' }), { status: 400 });
         }
-        const BackCall = await fetch(`${backendURL}/register`, {
+        const BackCall = await fetch(`${backendURL}/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -1,0 +1,1 @@
+export const frontendURL = process.env.FRONTEND_URL || 'http://172.31.80.1:3000';

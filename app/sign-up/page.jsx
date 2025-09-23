@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 import Link from 'next/link';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { signUpCall } from '@/app/services/auth';
+import { signUpCall } from '@/services/auth';
 
 const SignUp = () => {
 
