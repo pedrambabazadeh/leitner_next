@@ -3,7 +3,7 @@ import { backendURL } from "./config/backend";
 
 export async function middleware(request) {
   const {pathname} = request.nextUrl;
-  if (pathname.startsWith('/user') || pathname.startsWith('/dashboard')) {
+  if (pathname.startsWith('/user') || pathname.startsWith('/user-dashboard')) {
     const response = await fetch(`${backendURL}/me`, {
       method: 'GET',
       headers: {
@@ -19,7 +19,7 @@ export async function middleware(request) {
  
 }
 
- export const config = { matcher: ['/user/:path*', '/dashboard/:path*'] }
+ export const config = { matcher: ['/user/:path*', '/dashboard/:path*', '/user-dashboard/:path*'] }
  
 
  
