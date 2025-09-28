@@ -19,7 +19,7 @@ export async function middleware(request) {
  
 }
 
- export const config = { matcher: ['/user/:path*', '/dashboard/:path*', '/user-dashboard/:path*'] }
+ export const config = { matcher: ['/user/:path*', '/dashboard/:path*'/* , '/user-dashboard/:path*'*/] }
  
 
  

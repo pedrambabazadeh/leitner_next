@@ -18,6 +18,11 @@
     --color-border: #2C2C2C;
     --color-light: #ffffff;
     --light-text: #ffffff;
+    --muted-text: #bdbdbd;
+}
+.muted-text
+{
+  color: var(--muted-text);
 }
 
 .text-light
