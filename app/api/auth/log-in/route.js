@@ -24,7 +24,8 @@ export async function POST(request) {
     catch (error) {
         return new Response(JSON.stringify({ message: error.message || "server error" }), { status: 500 });
     }
-}*/
+}
+*/
 import { backendURL } from '@/config/backend.js';
 
 export async function POST(request) {
@@ -42,6 +43,7 @@ export async function POST(request) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(destructuredBody),
+      credentials: "include"
       // don't rely on credentials here — this is server->server
     });
 
