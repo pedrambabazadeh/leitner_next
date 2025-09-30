@@ -3,7 +3,7 @@ import { backendURL } from "./config/backend";
 
 export async function middleware(request) {
   const {pathname} = request.nextUrl;
-  if (pathname.startsWith('/user') || pathname.startsWith('/user-dashboard')) {
+  if (pathname.startsWith('/user') || pathname.startsWith('/user-dashboard') || pathname.startsWith('/log-in')) {
     const response = await fetch(`${backendURL}/me`, {
       method: 'POST',
       headers: {
@@ -22,7 +22,7 @@ export async function middleware(request) {
  return NextResponse.next(); 
 }
 
- export const config = { matcher: ['/user/:path*', '/dashboard/:path*' , '/user-dashboard/:path*'] }
+ export const config = { matcher: ['/user/:path*', '/dashboard/:path*' , '/user-dashboard/:path*', '/log-in/:path*'] }
  
 
  
