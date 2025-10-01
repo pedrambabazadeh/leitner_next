@@ -50,11 +50,15 @@ nav [data-active = ""] [name="/"] {
   color: var(--color-secondary);
 }
 
-nav [data-active = "log-in"] [name="log-in"] {
+nav [data-active = "user-dashboard"] [name="user-dashboard"] {
   color: var(--color-secondary);
 }
 
 nav [data-active = "words"] [name="words"] {
+  color: var(--color-secondary);
+}
+
+nav [data-active = "settings"] [name="settings"] {
   color: var(--color-secondary);
 }
 /* Components*/

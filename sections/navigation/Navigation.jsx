@@ -20,14 +20,14 @@ const Navigation = ({navItems}) => {
             <div name="/" className="nav-icon w-12/12 text-[var(--light-text)] flex justify-center items-center text-xl">
                 <Link href="/"><FaHome /></Link>
             </div>
-            <div name="log-in" className="nav-icon w-12/12 text-[var(--light-text)] flex justify-center items-center text-xl">
-               <Link href="/log-in"><FaUser /></Link>
+            <div name="user-dashboard" className="nav-icon w-12/12 text-[var(--light-text)] flex justify-center items-center text-xl">
+               <Link href="/user-dashboard"><FaUser /></Link>
             </div>
             <div name="words" className="nav-icon w-12/12 text-[var(--light-text)] flex justify-center items-center text-xl">
                <Link href="/words"><FaBook /></Link>
             </div>
-            <div className="nav-icon w-12/12 text-[var(--light-text)] flex justify-center items-center text-xl">
-                <FaCog />
+            <div name="settings" className="nav-icon w-12/12 text-[var(--light-text)] flex justify-center items-center text-xl">
+                <Link href="/settings"><FaCog /></Link>
             </div>
         </div>
     </nav>

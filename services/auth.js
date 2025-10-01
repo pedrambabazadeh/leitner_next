@@ -15,3 +15,9 @@ export function logInCall(data)
         body: JSON.stringify(data)
     });
 }
+
+export function logOutCall() {
+    return Call('/api/auth/log-out', {
+        method: 'POST'
+    });
+}
