@@ -24,7 +24,7 @@ ChartJS.register(
   Legend
 );
 
-export default function LinearChart({className}) {
+export default function LearningLinearChart({className}) {
   const data = {
     labels: ["January", "February", "March", "April", "May"],
     datasets: [
@@ -32,29 +32,32 @@ export default function LinearChart({className}) {
         label: "Users Learned Words with Methodology",
         data: [10, 25, 40, 55, 70],
         borderColor: "rgba(0, 240, 255, 1)",
-        backgroundColor: "rgba(0, 240, 255, 0.2)",
+        backgroundColor: "rgba(0, 238, 255, .5)",
+        tension: 0.35,
+        fill: true
       },
       {
         label: "Users Learned Words without methodology",
         data: [10, 20, 27, 33, 40],
         borderColor: "rgba(255, 0, 247, 1)",
-        backgroundColor: "rgba(255, 0, 247, 0.2)",
+        backgroundColor: "rgba(255, 0, 247, .5)",
+        tension: 0.35,
+        fill: true
       },
     ],
   };
 
   const options = {
     responsive: true,
-         scales: {
-          x: { grid: { color: '#2C2C2C' }, ticks: { color: '#EEE' } },
-          y: { grid: { color: '#2C2C2C' }, ticks: { color: '#EEE' }, beginAtZero: true }
-        },
+    maintainAspectRatio: false,
+    scales: {
+      x: { grid: { color: '#2C2C2C' }, ticks: { color: '#EEE', autoSkip: true } },
+      y: { grid: { color: '#2C2C2C' }, ticks: { color: '#EEE', stepSize: 10 }, beginAtZero: true, min: 0, max: 80}
+    },
     plugins: {
-      legend: { position: "top" },
-      title: { display: true, text: "Learning Curve" },
-      plugins:{legend: {lables: { color: "#fff" }}},
+      legend: { position: "top",labels: { color: "#fff" } },
     },
   };
 
-  return <div className={className}><Line className='p-6 card rounded-2xl max-w-[768px] height-[384px]' data={data} options={options} /></div>;
+  return <div className={className}><Line className='p-6  rounded-2xl max-w-[768px] height-[384px]' data={data} options={options} /></div>;
 }

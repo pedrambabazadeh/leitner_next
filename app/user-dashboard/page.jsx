@@ -1,8 +1,9 @@
 //user dashboard
-
+"use client"
 import React from 'react'
 import {Section} from '/utils'
 import { CardGroup, Card} from '/components';
+import {CategoryDoughnutChart, LearningLinearChart } from '/components/charts';
 
 const UserDashboard = () => {
   return (
@@ -61,31 +62,16 @@ const UserDashboard = () => {
         <div className="mb-8">
             <CardGroup cols={3}>
                 <Card>
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <h3 className="text-sm muted-text">Words Learned</h3>
-                            <div className='text-3xl font-bold text-[var(--color-primary)]'>85%</div>
-                        </div>
-                        <div className="text-sm muted-text">📈 +12% this week</div>
-                    </div>
+                    <h3 className="text-xl mb-3">Category Distribution</h3>
+                    <CategoryDoughnutChart />
                 </Card>
                 <Card>
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <h3 className="text-sm muted-text">Active Streak</h3>
-                            <div className='text-3xl font-bold text-[var(--color-accent)]'>18 days</div>
-                        </div>
-                        <div className="text-sm muted-text">🔥 keep it up</div>
-                    </div>
+                    <h3 className="text-xl mb-3">Learning Curve</h3>
+                    <LearningLinearChart />
                 </Card>
                 <Card>
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <h3 className="text-sm muted-text">Leitner Score</h3>
-                            <div className='text-3xl font-bold text-[var(--color-secondary)]'>72%</div>
-                        </div>
-                        <div className="text-sm muted-text">Level 3</div>
-                    </div>
+                    <h3 className="text-xl mb-3">Learning Curve</h3>
+                    <CategoryDoughnutChart />
                 </Card>
             </CardGroup>
         </div>

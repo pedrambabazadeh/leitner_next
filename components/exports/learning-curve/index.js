@@ -1,1 +1,1 @@
-export { default as LinearChart } from "@/components/charts/LinearChart";
+export { default as LinearChart } from "@/components/charts/LearningLinearChart";

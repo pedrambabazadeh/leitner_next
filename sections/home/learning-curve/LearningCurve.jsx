@@ -2,12 +2,12 @@
 
 import React from 'react'
 import { Section } from '@/utils'
-import { LinearChart } from '@/components/exports/learning-curve'
+import { LearningLinearChart } from '@/components/charts'
 
 const LearningCurve = () => {
   return (
     <Section title='Learning Curve'>
-        <LinearChart className='max-w-screen-md mx-auto'/>
+        <LearningLinearChart className='max-w-screen-md mx-auto card rounded-xl'/>
     </Section>
   )
 }
