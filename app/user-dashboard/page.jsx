@@ -3,8 +3,7 @@
 import React from 'react'
 import {Section} from '/utils'
 import { CardGroup, Card} from '/components';
-import {CategoryDoughnutChart, LearningLinearChart } from '/components/charts';
-
+import {CategoryDoughnutChart, LearningLinearChart, SkillsRadarChart } from '/components/charts';
 const UserDashboard = () => {
   return (
     <Section title="User Dashboard" className="min-h-screen">
@@ -70,8 +69,8 @@ const UserDashboard = () => {
                     <LearningLinearChart />
                 </Card>
                 <Card>
-                    <h3 className="text-xl mb-3">Learning Curve</h3>
-                    <CategoryDoughnutChart />
+                    <h3 className="text-xl mb-3">Skills Radar</h3>
+                    <SkillsRadarChart />
                 </Card>
             </CardGroup>
         </div>
