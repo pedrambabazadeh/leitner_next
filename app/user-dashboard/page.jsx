@@ -58,7 +58,7 @@ const UserDashboard = () => {
                 </Card>
             </CardGroup>
         </div>
-        <div className="mb-8">
+        <div className="mb-10">
             <CardGroup cols={3}>
                 <Card>
                     <h3 className="text-xl mb-3">Category Distribution</h3>
@@ -71,6 +71,77 @@ const UserDashboard = () => {
                 <Card>
                     <h3 className="text-xl mb-3">Skills Radar</h3>
                     <SkillsRadarChart />
+                </Card>
+            </CardGroup>
+        </div>
+        <div className="mb-12">
+            <CardGroup cols={2} className="[&>*:p-6]">
+                <Card>
+                    <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-lg">
+                            Recent Activities
+                        </h3>
+                        <a href="#" className='text-sm muted-text'>View All</a>
+                    </div>
+                    <ul className="space-y-3">
+                        <li className="flex items-start justify-between">
+                            <div>
+                                <div className="flex items-center gap-3">
+                                    <div className='w-10 h-10 rounded-md bg-[rgba(0,240,255,0.06)] flex items-center justify-center text-[var(--color-primary)]'>
+                                        V
+                                    </div>
+                                    <div>
+                                        <div className="font-medium">
+                                            Verstehen
+                                        </div>
+                                        <div className="text-sm muted-text">
+                                            Learned on Sep 10, 2023
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="text-sm muted-text"> +3p</div>
+                        </li>
+                        <li className="flex items-start justify-between">
+                            <div>
+                                <div className="flex items-center gap-3">
+                                    <div className='w-10 h-10 rounded-md bg-[rgba(255,0,247,0.05)] flex items-center justify-center text-[var(--color-accent)]'>
+                                        V
+                                    </div>
+                                    <div>
+                                        <div className="font-medium">
+                                            Auf wiedersehen
+                                        </div>
+                                        <div className="text-sm muted-text">
+                                            AI suggested 1d ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="text-sm muted-text"> +1 suggestion</div>
+                        </li>
+                        <li className="flex items-start justify-between">
+                            <div>
+                                <div className="flex items-center gap-3">
+                                    <div className='w-10 h-10 rounded-md bg-[rgba(250,190,37,0.05)] flex items-center justify-center text-[var(--color-secondary)]'>
+                                        N
+                                    </div>
+                                    <div>
+                                        <div className="font-medium">
+                                            Haus
+                                        </div>
+                                        <div className="text-sm muted-text">
+                                            Added to dictionary
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="text-sm muted-text"> __ </div>
+                        </li>
+                    </ul>
+                </Card>
+                <Card>
+                    {/* from here */   }
                 </Card>
             </CardGroup>
         </div>
