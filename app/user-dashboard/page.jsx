@@ -141,7 +141,55 @@ const UserDashboard = () => {
                     </ul>
                 </Card>
                 <Card>
-                    {/* from here */   }
+                    <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-lg">Personal Dictionary</h3>
+                        <a href="#" className="text-sm muted-text">Manage</a>
+                    </div>
+                    <div className="space-y-3">
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <button title="pronounce" aria-label="pronounce" className="p-2 rounded-md bg-[rgba(255,255,255,0.02)]">
+                                    🔊
+                                </button>
+                                <a href="#" className="font-medium">Haus</a>
+                                <span className="ml-2 text-sm muted-text"> House</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <button title="review" className="px-2 py-1 rounded text-sm btn-text-gradient">
+                                    Review
+                                </button>
+                                {/* use feature of the nextJs Intercepting routes for preview */}
+                                <button className="p-2 rounded text-sm color-[var(--color-secondary)]" title="favorite">
+                                    ⭐
+                                </button>
+                            </div>
+                        </div>
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <button title="pronounce" aria-label="pronounce" className="p-2 rounded-md bg-[rgba(255,255,255,0.02)]">
+                                    🔊
+                                </button>
+                                <a href="#" className="font-medium">Verstehen</a>
+                                <span className="ml-2 text-sm muted-text"> Understand</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <button title="review" className="px-2 py-1 rounded text-sm btn-text-gradient">
+                                    Review
+                                </button>
+                                {/* use feature of the nextJs Intercepting routes for preview */}
+                                <button className="p-2 rounded text-sm color-[var(--color-secondary)]" title="favorite">
+                                    ⭐
+                                </button>
+                            </div>
+                        </div>
+                        <div className='text-center mt-3'>
+                            <button className="text-sm btn-back-gradient-empty px-3 py-2 rounded"> 
+                                <span>
+                                    + Add New Word
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </Card>
             </CardGroup>
         </div>
