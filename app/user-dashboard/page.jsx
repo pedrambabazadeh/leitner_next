@@ -6,7 +6,7 @@ import { CardGroup, Card} from '/components';
 import {CategoryDoughnutChart, LearningLinearChart, SkillsRadarChart } from '/components/charts';
 const UserDashboard = () => {
   return (
-    <Section title="User Dashboard" className="min-h-screen">
+    <Section className="min-h-screen">
         <div className="mb-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md-6">
                 <div>
