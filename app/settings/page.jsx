@@ -4,6 +4,8 @@ import React, {useEffect, useState} from 'react'
 import {Section} from '@/utils'
 import { logOutCall } from '@/services/auth';
 import { CardGroup, Card} from '@/components';
+import {sampleProfilePhoto} from '@/config/frontend';
+import { EditButton } from '@/ui/elements/EditButton';
 
 
 const Setting = () => {
@@ -42,7 +44,7 @@ const Setting = () => {
                 </div>
                 <div className="flex items-center gap-6">
                   <label className="flex items-center gap-2">
-                    <input className="form-radio text-[var(--color-primary)]" type="radio" name="theme" value="dark" checked />
+                    <input className="form-radio text-[var(--color-primary)]" type="radio" name="theme" value="dark" defaultChecked />
                     <span>Dark Mode</span>
                   </label>
                   <label className="flex items-center gap-2">
@@ -54,8 +56,24 @@ const Setting = () => {
              </div>
              <div className="mb-8">
               <Card>
-                
-                </Card>
+                <h2 className="text-lg font-semibold mb-4 flex items-center justify-between">
+                  <span>"Profile"</span>
+                  <EditButton />
+                </h2>
+                <div className="flex items-center gap-6 mb-4">
+                  <img className="w-20 h-20 rounded-full border border-[var(--color-border)]" src={sampleProfilePhoto} alt="Profile Picture" />
+                  <div>
+                    <button className="btn-primary px-2 py-1 rounded-md"> Change Photo</button>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <input type="text" id="name_input" value="John " disabled className="px-3 py-2 border border-[var(--color-border)] rounded bg-[var(--color-disabled)]" />
+                  <input type="text" id="last_name_input" value="Doe" disabled className="px-3 py-2 border border-[var(--color-border)] rounded bg-[var(--color-disabled)]" />
+                </div>
+                <div id="saveBtn" className="mt-4 hidden">
+                  <button className="btn-primary px-4 py-2 rounded-md"> Save Changes</button>
+                </div>
+              </Card>
              </div>
          </Section>
     </>

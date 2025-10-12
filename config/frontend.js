@@ -1,1 +1,2 @@
 export const frontendURL = process.env.FRONTEND_URL || 'http://172.31.80.1:3000';
+export const sampleProfilePhoto = 'https://imgv3.fotor.com/images/gallery/generate-a-realistic-ai-avatar-of-a-professional-woman-in-fotor.jpg';
