@@ -13,6 +13,7 @@
     --color-accent: #FF00F7;
     --color-secondary: #fabe25;
     --color-surface: #121212;
+    --color-error: #ff0033;
     --color-disabled: #3A3A3A;
     --color-background: #0A0A0A;
     --color-background-second: #111827;
@@ -73,6 +74,18 @@ nav [data-active = "settings"] [name="settings"] {
 {
   color: var(--color-background);
   background-color: var(--color-accent);
+}
+
+.btn-danger
+{
+  color: var(--color-background);
+  background-color: var(--color-error);
+}
+
+.btn-danger-empty {
+  color: var(--color-error);
+  background-color: transparent;
+  border: 1px solid var(--color-error);
 }
 
 .btn-primary-empty {

@@ -6,6 +6,7 @@ import { logOutCall } from '@/services/auth';
 import { CardGroup, Card} from '@/components';
 import {sampleProfilePhoto} from '@/config/frontend';
 import { EditButton } from '@/ui/elements/EditButton';
+import { FaSignOutAlt } from 'react-icons/fa';
 
 
 const Setting = () => {
@@ -57,7 +58,7 @@ const Setting = () => {
              <div className="mb-8">
               <Card>
                 <h2 className="text-lg font-semibold mb-4 flex items-center justify-between">
-                  <span>"Profile"</span>
+                  <span>Profile</span>
                   <EditButton />
                 </h2>
                 <div className="flex items-center gap-6 mb-4">
@@ -75,6 +76,38 @@ const Setting = () => {
                 </div>
               </Card>
              </div>
+             <div className="mb-8">
+              <Card>
+                <h2 className="text-lg font-semibold mb-4 flex items-center justify-between">
+                  <span>Preferences</span>
+                  <EditButton />
+                </h2>
+                <div className="flex flex-col gap-3">
+                  <label className="flex items-center gap-2">
+                    <input className="form-checkbox text-[var(--color-primary)]" type="checkbox" name="email_notifications" defaultChecked />
+                    <span>Email Notifications</span>
+                  </label>
+                  <label className="flex items-center gap-2">
+                    <input className="form-checkbox text-[var(--color-primary)]" type="checkbox" name="email_notifications" />
+                    <span>Enable AI suggestions</span>
+                  </label>
+                </div>
+              </Card>
+             </div>
+            <div className="mb-8">
+              <Card>
+                <h2 className="text-lg font-semibold mb-4">Account</h2>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button className="px-4 py-2 rounded-md font-bold text-black flex items-center gap-2 btn-back-gradient">
+                    <FaSignOutAlt/>
+                    Log Out
+                  </button>
+                  <button className="px-4 py-2 rounded-md font-bold text-black flex items-center gap-2 btn-danger-empty">
+                    Delete Account
+                  </button>
+                </div>
+              </Card>
+            </div>
          </Section>
     </>
   )
