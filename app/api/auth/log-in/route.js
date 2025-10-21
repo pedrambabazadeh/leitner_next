@@ -16,7 +16,7 @@ export async function POST(request) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(destructuredBody),
       credentials: "include"
-      // don't rely on credentials here — this is server->server
+      // // keeps cookies attached — this is server->server
     });
 
     const text = await BackCall.text();
