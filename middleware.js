@@ -47,7 +47,7 @@ export async function middleware(request) {
     return { ok: response.ok, res: NextResponse.next() };
   }
 
-  // 🧱 Protected routes — require auth
+  //  Protected routes — require auth
   if (pathname.startsWith('/user') || pathname.startsWith('/user-dashboard')) {
     const { ok, res } = await checkAuth();
     if (!ok) {
@@ -57,7 +57,7 @@ export async function middleware(request) {
     return res;
   }
 
-  // 🚪 Public routes — redirect if already logged in
+  //  Public routes — redirect if already logged in
   if (pathname.startsWith('/log-in') || pathname.startsWith('/sign-up')) {
     const { ok, res } = await checkAuth();
     if (ok) {
