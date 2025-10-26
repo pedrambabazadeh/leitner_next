@@ -5,18 +5,24 @@ import Link from 'next/link';
 import {logInCall} from '@/services/auth';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
+import { useRouter } from 'next/router';
 
 const LogIn = () => {
 
   const [status, setStatus] = useState(null);
+  //const router = useRouter(); I get an error when enabling this line
 
   const handleSubmit = async (values, {setSubmitting, resetForm}) => {
     setStatus(null);
     try {
       setStatus('Submitting...');
-       await logInCall(values);
+       let res = await logInCall(values);
         setStatus('Login successful!');
         resetForm();
+        if (res)
+        {
+         //router.push('/user-dashboard');
+        }
         // here I should redirect the user to the new page
     } catch (error) {
       setStatus(error?.message || 'An error occurred');

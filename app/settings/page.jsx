@@ -11,7 +11,7 @@ import { FaSignOutAlt } from 'react-icons/fa';
 
 const Setting = () => {
 
-  const [msg, setMsg] = useState('imitial');
+  const [msg, setMsg] = useState('initial');
 
     const handleLogout = async () => {
     const response = await logOutCall();
@@ -98,7 +98,7 @@ const Setting = () => {
               <Card>
                 <h2 className="text-lg font-semibold mb-4">Account</h2>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="px-4 py-2 rounded-md font-bold text-black flex items-center gap-2 btn-back-gradient">
+                  <button onClick={handleLogout} className="px-4 py-2 rounded-md font-bold text-black flex items-center gap-2 btn-back-gradient">
                     <FaSignOutAlt/>
                     Log Out
                   </button>
