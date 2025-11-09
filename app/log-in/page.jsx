@@ -5,12 +5,12 @@ import Link from 'next/link';
 import {logInCall} from '@/services/auth';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const LogIn = () => {
 
   const [status, setStatus] = useState(null);
-  //const router = useRouter(); I get an error when enabling this line
+  const router = useRouter();
 
   const handleSubmit = async (values, {setSubmitting, resetForm}) => {
     setStatus(null);
@@ -21,7 +21,7 @@ const LogIn = () => {
         resetForm();
         if (res)
         {
-         //router.push('/user-dashboard');
+         router.push('/user-dashboard');
         }
         // here I should redirect the user to the new page
     } catch (error) {
@@ -43,7 +43,7 @@ const LogIn = () => {
   });
 
   return (
-    <div className="log-in-container p-8 mx-auto rounded-xl bg-[var(--color-surface)] text-white w-full max-w-[480px]">
+    <div className="log-in-container p-8 mt-18 mx-auto rounded-xl bg-[var(--color-surface)] text-white w-full max-w-[480px]">
         <h2 style={{fontWeight:700}} className="mb-3 text-2xl text-[var(--color-primary)]">Log In to N2N</h2>
       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
         <Form  id="login-form">

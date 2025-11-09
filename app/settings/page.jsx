@@ -7,16 +7,19 @@ import { CardGroup, Card} from '@/components';
 import {sampleProfilePhoto} from '@/config/frontend';
 import { EditButton } from '@/ui/elements/EditButton';
 import { FaSignOutAlt } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 
 const Setting = () => {
 
   const [msg, setMsg] = useState('initial');
+  const router = useRouter();
 
     const handleLogout = async () => {
     const response = await logOutCall();
       if (response) {
       setMsg('Logged out successfully' + response.status + (response.message ? (': ' + response.message) : ''));
+      router.push('/log-in');
     } else {
         setMsg('Failed to log out' + response.status + (response.error ? (': ' + response.error) : ''));
     }
