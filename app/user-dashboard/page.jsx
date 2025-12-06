@@ -1,10 +1,19 @@
 //user dashboard
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Section} from '/utils'
+import {data} from './data'
 import { CardGroup, Card} from '/components';
 import {CategoryDoughnutChart, LearningLinearChart, SkillsRadarChart } from '/components/charts';
 const UserDashboard = () => {
+   const [mydata, setMydata] = React.useState({email: 'loading...'});
+
+   useEffect(() => {
+    data().then(fetchedData => {
+        setMydata(fetchedData);
+    });
+   }, []);
+
   return (
     <Section className="min-h-screen">
         <div className="mb-8">
@@ -14,7 +23,7 @@ const UserDashboard = () => {
                         Dashboard
                     </h2>
                     <p className="muted-text text-sm">
-                            Welcome back! here's your progress at a glance
+                            Welcome back {mydata.name}! here's your progress at a glance
                     </p>
                 </div>
                 <div className="flex gap-3">

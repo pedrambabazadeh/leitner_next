@@ -1,4 +1,4 @@
-
+import { frontendURL } from "@/config/frontend";
 export async function apiFetch(path, opts = {}) {
   const base = process.env.NEXT_PUBLIC_BFF_BASE || ""; // usually ""
   const res = await fetch(base + path, {
