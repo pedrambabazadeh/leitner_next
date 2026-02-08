@@ -42,29 +42,34 @@ export async function middleware(request) {
         return { ok: response.ok, res };
       }
     }
-
+    let finalRes = NextResponse.next();
+    response.headers.forEach((value, key) => {
+      if (key.toLowerCase() === 'set-cookie') {
+        finalRes.headers.append('set-cookie', value);
+      }
+    });
     // Step 3: Return result (either /me success or fail)
-    return { ok: response.ok, res: NextResponse.next() };
+    return { ok: response.ok, finalRes };
   }
 
   //  Protected routes — require auth
   if (pathname.startsWith('/user') || pathname.startsWith('/user-dashboard')) {
-    const { ok, res } = await checkAuth();
+    const { ok, finalRes } = await checkAuth();
     if (!ok) {
       const loginURL = new URL('/log-in', request.url);
       return NextResponse.redirect(loginURL);
     }
-    return res;
+    return finalRes;
   }
 
   //  Public routes — redirect if already logged in
   if (pathname.startsWith('/log-in') || pathname.startsWith('/sign-up')) {
-    const { ok, res } = await checkAuth();
+    const { ok, finalRes } = await checkAuth();
     if (ok) {
       const dashboardURL = new URL('/user-dashboard', request.url);
       return NextResponse.redirect(dashboardURL);
     }
-    return res;
+    return finalRes;
   }
 
   // Default — continue
