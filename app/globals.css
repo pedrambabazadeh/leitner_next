@@ -94,6 +94,18 @@ nav [data-active = "settings"] [name="settings"] {
   border: 1px solid var(--color-primary);
 }
 
+.btn-secondary-empty {
+  color: var(--color-secondary);
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+}
+
+.btn-light-empty {
+  color: var(--color-light);
+  background-color: transparent;
+  border: 1px solid var(--color-light);
+}
+
 .btn-accent-empty {
   color: var(--color-accent);
   background-color: transparent;
