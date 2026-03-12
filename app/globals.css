@@ -166,3 +166,15 @@ nav [data-active = "settings"] [name="settings"] {
   box-shadow: 0 0 2px 2px rgba(250, 190, 37, .2);
   outline: none;
 }
+
+.file-button::file-selector-button
+{
+  color: var(--color-disabled);
+  background-color: var(--muted-text);
+  padding:2px 5px;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}

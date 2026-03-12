@@ -40,6 +40,10 @@ const page = () => {
           <div className="personal-note-form mt-[24px] bg-[var(--color-disabled)] p-4 rounded-lg">
             <h3 className="mb-[8px] text-xl text-[var(--color-light)]">Personal Note</h3>
             <textarea placeholder='write your note...' name="personal-note" id="personal-note" className="w-full bg-[var(--color-surface)] p-2 rounded-lg text-[var(--color-light)]"></textarea>
+            <input type="file" id="photoUpload" accept="image/*" className='file-button text-[var(--muted-text)] mt-[12px]' />
+            <button className="btn-back-gradient px-4 py-2 rounded-lg font-semibold hover:scale-105 transition mt-[12px]">
+              Save Note
+            </button>
           </div>
         </div>
       </div>
