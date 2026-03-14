@@ -9,7 +9,9 @@ const page = () => {
   return (
     <Section className='py-20 px-8 mx-auto'>
       <div className="card flex rounded-2xl p-6">
-        <div className="slider w-[50%]"></div>
+        <div className="slider w-[50%]">
+          <img src="https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_1920,q_auto/images/panoramic/GettyImages-1840110998_536693_urhuig.jpg" alt="test photo" />
+        </div>
         <div className="details">
           <h2 className="text-[var(--color-primary)] text-4xl font-bold mb-[8px]">{word}</h2>
           <p className="light-text mb-[8px] text-lg mb-[12px]"> ipsum</p>
